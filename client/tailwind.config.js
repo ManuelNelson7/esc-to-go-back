@@ -43,6 +43,7 @@ module.exports = {
         primary: '#FAFAFA',
         secColor: '#efefef',
         navColor: '#BEBEBE',
+        gold : '#AB9263',
       },
       backgroundColor: {
         mainColor: '#FBF8F9',
@@ -90,4 +91,11 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  colors: {
+    'gold' : '#AB9263',
+    'creme' : 'EDDECD',
+    'nude' : 'C1AB96',
+    'brown': '62503D',
+    'orange' : '8F663B',
+  },
 };
