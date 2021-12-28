@@ -66,7 +66,7 @@ const PinDetail = ({ user }) => {
     return (
         <>
 
-            <div className='flex xl-flex-row flex-col m-auto bg-white' style={{ maxWidth: '1500px', borderRadius: '32px' }}>
+            <div className='flex xl-flex-row flex-col m-auto bg-white dark:bg-darkg' style={{ maxWidth: '1500px', borderRadius: '32px' }}>
                 <div className='foex justify-center items-center md:items-start flex-initial'>
                     <img
                         src={pinDetail?.image && urlFor(pinDetail.image).url()}
@@ -83,31 +83,31 @@ const PinDetail = ({ user }) => {
                                 onClick={(e) => e.stopPropagation()}
                                 className='bg-white w-8 h-8 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outlin-none'
                             >
-                                <MdDownloadForOffline />
+                                <MdDownloadForOffline  />
                             </a>
                         </div>
-                        <a href={pinDetail.destination} target='_blank' rel='noreferrer'>
+                        <a href={pinDetail.destination} target='_blank' rel='noreferrer' className='dark:text-db'>
                             {pinDetail.destination}
                         </a>
                     </div>
                     <div>
-                        <h1 className="text-4xl font-bold break-words mt-3">
+                        <h1 className="text-4xl font-bold break-words mt-3 dark:text-white">
                             {pinDetail.title}
                         </h1>
-                        <p className='mt-3'>{pinDetail.about}</p>
+                        <p className='mt-3 dark:text-db'>{pinDetail.about}</p>
                     </div>
-                    <Link to={`user-profile/${pinDetail.postedBy?._id}`} className='flex gap-2 m5-5 items-center bg-white rounded-lg'>
+                    <Link to={`user-profile/${pinDetail.postedBy?._id}`} className='flex gap-2 m5-5 items-center bg-white dark:bg-darkg rounded-lg'>
                         <img src={pinDetail.postedBy?.image} alt="user-profile" className='w-8 h-8 rounded-full object-cover' />
-                        <p className='font-semibold capitalize'>{pinDetail.postedBy?.userName}</p>
+                        <p className='font-semibold capitalize dark:text-white'>{pinDetail.postedBy?.userName}</p>
                     </Link>
                     <h2 className='mt-5 text-xl'>Comments</h2>
                     <div className="max-h-370 overflow-y-auto">
                         {pinDetail?.comments?.map((comment, i) => (
-                            <div className='flex gap-2 mt-5 items-center bg-white rounded-lg' key={i}>
+                            <div className='flex gap-2 px-1 py-0.5 mt-5 items-center bg-white dark:bg-darkgray rounded-lg' key={i}>
                                 <img src={comment.postedBy.image} alt="user-profile" className='w-10 h-10 rounded-full cursor-pointer' />
                                 <div className='flex flex-col'>
-                                    <p className='font-bold'>{comment.postedBy.userName}</p>
-                                    <p>{comment.comment}</p>
+                                    <p className='font-bold dark:text-white dark:font-semibold'>{comment.postedBy.userName}</p>
+                                    <p className='dark:text-white'>{comment.comment}</p>
                                 </div>
                             </div>
                         ))}
@@ -117,7 +117,7 @@ const PinDetail = ({ user }) => {
                             <img src={pinDetail.postedBy?.image} alt="user-profile" className='w-10 h-10 rounded-full cursor-pointer' />
                         </Link>
                         <input
-                            className='flex-1 border-gray-100 outline-none border-2 p-2 rounded-2xl focus:border-gray-300'
+                            className='flex-1 border-gray-100 dark:text-white dark:border-neutral-600 dark:bg-darkgray outline-none border-2 p-2 rounded-2xl focus:border-gray-300'
                             type="text"
                             placeholder='Add a comment'
                             value={comment}
@@ -125,7 +125,7 @@ const PinDetail = ({ user }) => {
                         />
                         <button
                             type='button'
-                            className="bg-red-500 text-white rounded-full px-6 py-2 semibold text-base outline-none"
+                            className="bg-gold text-white rounded-full px-6 py-2 semibold text-base outline-none"
                             onClick={addComment}
                         >
                             {addingComment ? 'Posting the comment...' : 'Post'}
