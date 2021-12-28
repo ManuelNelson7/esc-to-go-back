@@ -83,24 +83,28 @@ const PinDetail = ({ user }) => {
                                 onClick={(e) => e.stopPropagation()}
                                 className='bg-white w-8 h-8 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outlin-none'
                             >
-                                <MdDownloadForOffline  />
+                                <MdDownloadForOffline />
                             </a>
                         </div>
                         <a href={pinDetail.destination} target='_blank' rel='noreferrer' className='dark:text-db'>
                             {pinDetail.destination}
                         </a>
                     </div>
+
                     <div>
                         <h1 className="text-4xl font-bold break-words mt-3 dark:text-white">
                             {pinDetail.title}
                         </h1>
                         <p className='mt-3 dark:text-db'>{pinDetail.about}</p>
                     </div>
-                    <Link to={`user-profile/${pinDetail.postedBy?._id}`} className='flex gap-2 m5-5 items-center bg-white dark:bg-darkg rounded-lg'>
+
+                    <Link to={`user-profile/${pinDetail.postedBy?._id}`} className='flex gap-2 m5-5 items-center bg-white dark:bg-darkg rounded-lg mt-2'>
                         <img src={pinDetail.postedBy?.image} alt="user-profile" className='w-8 h-8 rounded-full object-cover' />
                         <p className='font-semibold capitalize dark:text-white'>{pinDetail.postedBy?.userName}</p>
                     </Link>
-                    <h2 className='mt-5 text-xl'>Comments</h2>
+
+                    <h2 className='mt-5 text-xl dark:text-white'>Comments</h2>
+
                     <div className="max-h-370 overflow-y-auto">
                         {pinDetail?.comments?.map((comment, i) => (
                             <div className='flex gap-2 px-1 py-0.5 mt-5 items-center bg-white dark:bg-darkgray rounded-lg' key={i}>
@@ -112,6 +116,7 @@ const PinDetail = ({ user }) => {
                             </div>
                         ))}
                     </div>
+
                     <div className='flex flex-wrap mt-6 gap-3'>
                         <Link to={`user-profile/${pinDetail.postedBy?._id}`}>
                             <img src={pinDetail.postedBy?.image} alt="user-profile" className='w-10 h-10 rounded-full cursor-pointer' />

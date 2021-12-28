@@ -1,30 +1,30 @@
 export const categories = [
   {
     name: 'Old Hollywood',
-    image: 'https://i.pinimg.com/236x/25/14/29/251429345940a47490cc3d47dfe0a8eb.jpg',
+    image: 'https://swashvillage.org/storage/img/images_2/humphrey-bogart-biography_2.jpg',
   },
   {
     name: 'Music',
-    image: 'https://i.pinimg.com/236x/03/48/b6/0348b65919fcbe1e4f559dc4feb0ee13.jpg',
+    image: 'https://a.1stdibscdn.com/archivesE/upload/a_516/33_15/0337_1725/0337_1725-1.jpeg'
   },
   {
-    name: 'Dailylife',
-    image: 'https://i.pinimg.com/236x/03/48/b6/0348b65919fcbe1e4f559dc4feb0ee13.jpg',
+    name: `Daily life`,
+    image: 'https://d3m2ca683sarz5.cloudfront.net/wp-content/uploads/2018/06/26080518/50s12.jpg',
   },
   {
     name: 'Royal Family',
-    image: 'https://i.pinimg.com/236x/03/48/b6/0348b65919fcbe1e4f559dc4feb0ee13.jpg',
+    image: 'https://th.bing.com/th/id/R.b14c73a01310af5e13cb5237427c1ca9?rik=CYFlofJ7U0%2bI0Q&pid=ImgRaw&r=0',
   },
   {
     name: 'War',
-    image: 'https://i.pinimg.com/236x/b9/82/d4/b982d49a1edd984c4faef745fd1f8479.jpg',
+    image: 'https://cdn.cnn.com/cnnnext/dam/assets/181107171032-02-ww2-us-german-vets-painting-tank-super-tease.jpg',
   },
   {
     name: 'Fashion',
-    image: 'https://i.pinimg.com/736x/f4/e5/ba/f4e5ba22311039662dd253be33bf5f0e.jpg',
+    image: 'https://media.vogue.es/photos/5cc720a98f6f6717335b8c57/1:1/w_900,h_900,c_limit/recordamos_la_figura_de_audrey_hepburn_en_el_20_aniversario_de_su_muerte_632549946.jpg',
   }, {
     name: 'Vintage illustrations',
-    image: 'https://i.pinimg.com/236x/fa/95/98/fa95986f2c408098531ca7cc78aee3a4.jpg',
+    image: 'https://i.pinimg.com/564x/47/c0/0c/47c00c48929b8d543e50f146a14b5ead.jpg',
   },
   {
     name: 'others',

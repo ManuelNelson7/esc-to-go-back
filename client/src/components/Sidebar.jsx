@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { AiFillHome } from 'react-icons/ai'
 import { IoIosArrowForward } from 'react-icons/io'
@@ -13,6 +13,7 @@ const isActiveStyle = 'flex items-center dark:text-white px-5 gap-3 font-extrabo
 
 
 const Sidebar = ({ user, closeToggle }) => {
+    const [dark, setDark] = useState(false)
     const [nextTheme, setTheme] = useTheme()
 
     const handleCloseSideBar = () => {
@@ -27,7 +28,7 @@ const Sidebar = ({ user, closeToggle }) => {
                     className='flex px-5 gap-2 my-6 pt-1 w-190 items-center'
                     onClick={handleCloseSideBar}
                 >
-                    <img src='/img/logo.png' alt="logo" className='w-full' />
+                    <img src={nextTheme ==='dark' ? '/img/logo.png' : '/img/logo-white.png' } alt="logo" className='w-full' />
                 </Link>
                 <div className='flex flex-col gap-5'>
                     <NavLink
@@ -66,11 +67,11 @@ const Sidebar = ({ user, closeToggle }) => {
             {user && (
                 <Link
                     to={`user-profile/${user._id}`}
-                    className="flex my-5 mb-3 gap-2 p-2 items-center bg-white rounded-lg shadow-lg mx-3"
+                    className="flex my-5 mb-3 gap-2 p-2 items-center bg-white rounded-lg shadow-lg mx-3 dark:bg-darkgray"
                     onClick={handleCloseSideBar}
                 >
                     <img src={user.image} className="w-10 h-10 rounded-full" alt="user-profile" />
-                    <p>{user.userName}</p>
+                    <p className='dark:text-white'>{user.userName}</p>
                 </Link>
             )}
         </div>

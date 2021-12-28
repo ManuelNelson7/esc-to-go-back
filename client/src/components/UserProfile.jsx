@@ -12,7 +12,7 @@ import Spinner from './Spinner'
 import UploadBanner from './UploadBanner'
 
 const activeBtnStyles = 'bg-gold text-white font-bold p-2 rounded-full w-20 outline-none'
-const notActiveBtnStyles = 'bg-primary mr-4 text-black font-bold p-2 rounded-full w-20 outline-none'
+const notActiveBtnStyles = 'bg-primary mr-4 dark:text-white text-black font-bold p-2 rounded-full w-20 outline-none'
 
 const UserProfile = () => {
     const [user, setUser] = useState(null)
@@ -77,13 +77,13 @@ const UserProfile = () => {
                         <img
                             src={banner ? banner : 'https://source.unsplash.com/1600x900/?vintage'}
                             className='w-full h-370 2xl:h-420 shadow-lg object-cover'
-                            alt='banner-picture'
+                            alt='banner'
                         />
                         <img src={user.image}
                             className='rounded-full w-20 h-20 -mt-10 -shadow-xl object-cover'
-                            alt="Profile picture"
+                            alt="Profile"
                         />
-                        <h1 className='font-bold text-3xl text-center mt-3'>{user.userName}</h1>
+                        <h1 className='font-bold text-3xl text-center mt-3 pb-1.5 dark:text-white'>{user.userName}</h1>
                         <div className="absolute top-0 z-1 right-0 p-2">
                             {userId === user._id && (
                                 <GoogleLogout
