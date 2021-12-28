@@ -31,15 +31,15 @@ const Home = () => {
     });
 
     return (
-        <div className='flex bg-gray-50 md:flex-row flex-col h-screen transaction-height duration-75 ease-out'>
+        <div className='flex bg-gray-50 dark:bg-darkv md:flex-row flex-col h-screen transaction-height duration-75 ease-out'>
             <div className="hidden md:flex h-screen flex-initial">
                 <Sidebar user={user && user} />
             </div>
             <div className="flex md:hidden flex-row">
                 <div className='p-2 w-full flex flex-row justify-between items-center shadow-md'>
-                    <HiMenu fontSize={40} className='cursor-pointer' onClick={() => setToggleSidebar(true)} />
+                    <HiMenu fontSize={40} className='cursor-pointer dark:invert' onClick={() => setToggleSidebar(true)} />
                     <Link to="/">
-                        <img src={logo} alt="logo" className='w-28' />
+                        <img src='/img/esc-100.png' alt="logo" className='h-11 dark:invert' />
                     </Link>
                     <Link to={`user-profile/${user?._id}`}>
                         <img src={user?.image} alt="logo" className='w-11 rounded-full' />

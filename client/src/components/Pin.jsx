@@ -69,7 +69,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                             </div>
                             {alreadySaved ? (
                                 <button
-                                    type="button" className='bg-red-500 opacity-75 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outlined-none'
+                                    type="button" className='bg-gold opacity-75 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outlined-none'
                                 >
                                     {save?.length} Saved
                                 </button>
@@ -79,7 +79,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                                         e.stopPropagation()
                                         savePin(_id);
                                     }}
-                                    type="button" className='bg-red-500 opacity-75 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outlined-none'
+                                    type="button" className='bg-gold opacity-75 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outlined-none'
                                 >
                                     Save
                                 </button>
@@ -114,8 +114,8 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                 )}
             </div>
             <Link to={`user-profile/${postedBy?._id}`} className='flex gap-2 mt-2 items-center'>
-                <img src={postedBy?.image} alt="user-profile" className='w-8 h-8 rounded-full object-cover'/>
-                <p className='font-semibold capitalize'>{postedBy?.userName}</p>
+                <img src={postedBy?.image} alt="user-profile" className='w-8 h-8 rounded-full object-cover' />
+                <p className='font-semibold capitalize dark:text-white'>{postedBy?.userName}</p>
             </Link>
         </div>
     )

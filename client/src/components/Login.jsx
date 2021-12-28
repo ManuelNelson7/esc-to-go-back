@@ -1,7 +1,7 @@
 import React from 'react'
 import GoogleLogin from 'react-google-login'
 import { useNavigate } from 'react-router-dom'
-import { FcGoogle } from 'react-icons/fc';
+import { FaGoogle } from 'react-icons/fa';
 import shareVideo from '../assets/share.mp4'
 import logo from '../assets/logowhite.png'
 
@@ -41,8 +41,7 @@ const Login = () => {
         <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0  bg-blackOverlay">
           <div className="p-5 w-56 flex-col items-center">
             <p className='text-white flex font-bold text-3xl justify-start'>Press</p>
-            {/*<img src={logo} width="130px" />*/}
-            <img src="/img/esc-100.png" alt="Esc logo" className='invert'/>
+            <img src="/img/esc-100.png" alt="Esc logo" className='invert' />
             <p className='text-white flex font-bold text-3xl items-end'>To go <span className='ml-1.5 text-gold'>back</span></p>
           </div>
 
@@ -50,14 +49,14 @@ const Login = () => {
             <GoogleLogin
               clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
               render={(renderProps) => (
-                
+
                 <button
                   type="button"
                   className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none"
                   onClick={renderProps.onClick}
                   disabled={renderProps.disabled}
                 >
-                  <FcGoogle className="mr-4" /> Sign in with google
+                  <FaGoogle className="mr-4" /> Sign in with google
                 </button>
               )}
               onSuccess={responseGoogle}

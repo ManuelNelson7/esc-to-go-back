@@ -13,3 +13,15 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
     display: none,
 }
+.toggle-checkbox:checked {
+    @apply: right-0 border-green-400;
+    right: 0;
+    border-color: #AB9263;
+    transition: 0.3s;
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply: bg-green-400;
+    background-color: #AB9263;
+    transition: 0.3s;
+  }
+

@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       margin: {
@@ -44,11 +44,23 @@ module.exports = {
         secColor: '#efefef',
         navColor: '#BEBEBE',
         gold : '#AB9263',
+        darkv: '#0A0807',
+        brown: '#62503D',
+        orange : '#8F663B',
+        creme: '#EDDECD',
+        db: '#DBDBDB',
       },
       backgroundColor: {
         mainColor: '#FBF8F9',
         secondaryColor: '#F0F0F0',
         blackOverlay: 'rgba(0, 0 ,0 ,0.7)',
+        gold : '#AB9263',
+        creme: '#EDDECD',
+        darkv: '#0A0807',
+        brown: '#62503D',
+        orange : '#8F663B',
+        darkgray: '#363636',
+        darkg: '#181818'
       },
       keyframes: {
         'slide-in': {
