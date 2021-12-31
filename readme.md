@@ -1,6 +1,6 @@
-![](./Mockup-min.png)
-
 # Press Esc to go back
+
+![](./Mockup-min.png)
 
 This is an social media project where you can share and save images and gifs from the past, getting your daily dosis of vintage.
 
