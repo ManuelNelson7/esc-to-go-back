@@ -106,7 +106,7 @@ const CreatePin = ({ user }) => {
                             </label>
                         ) : (
                             <div className='relative h-full'>
-                                <img src={imageAsset?.url} alt="uploaded pic" className='h-full w-full' />
+                                <img src={imageAsset?.url} alt="uploaded pic" className='w-full' />
                                 <button
                                     type='button'
                                     className='absolute bottom-3 right-3 p-3 rounded-full bg-white text-xl cursor-pointer outline-none hover:shadow-md transition-all duration-500 ease-in-out'
@@ -156,7 +156,7 @@ const CreatePin = ({ user }) => {
                                 className='outline-none w-4/5 text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer'
 
                             >
-                                <option value="other" disabled defaultValue className='bg-white'>Select Category</option>
+                                <option value="other" defaultValue className='bg-white'>Select Category</option>
                                 {categories.map((item, v) => (
                                     <option key={v} className='text-base border-0 outline-none capitalize bg-white text-black' value={item.name}>
                                         {item.name}
@@ -168,7 +168,7 @@ const CreatePin = ({ user }) => {
                             <button
                                 type='button'
                                 onClick={savePin}
-                                className='bg-red-500 text-white font-bold p-2 rounded-full w-28 outline-none'
+                                className='bg-gold text-white font-bold p-2 rounded-full w-28 outline-none'
                             >
                                 Save Pin
                             </button>

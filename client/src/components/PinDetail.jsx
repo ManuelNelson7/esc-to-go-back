@@ -39,6 +39,8 @@ const PinDetail = ({ user }) => {
         }
     }
 
+
+
     const fetchPinDetails = () => {
         let query = pinDetailQuery(pinId);
 
@@ -75,6 +77,7 @@ const PinDetail = ({ user }) => {
                         alt='user-post'
                     />
                 </div>
+
                 <div className='w-full p-5 flex-1 xl:min-w-620'>
                     <div className="flex items-center justify-between">
                         <div className="flex gap-2 items-center">
@@ -86,6 +89,7 @@ const PinDetail = ({ user }) => {
                                 <MdDownloadForOffline />
                             </a>
                         </div>
+
                         <a href={pinDetail.destination} target='_blank' rel='noreferrer' className='dark:text-db'>
                             {pinDetail.destination}
                         </a>
@@ -98,7 +102,7 @@ const PinDetail = ({ user }) => {
                         <p className='mt-3 dark:text-db'>{pinDetail.about}</p>
                     </div>
 
-                    <Link to={`user-profile/${pinDetail.postedBy?._id}`} className='flex gap-2 m5-5 items-center bg-white dark:bg-darkg rounded-lg mt-2'>
+                    <Link to={`/user-profile/${pinDetail.postedBy?._id}`} className='flex gap-2 m5-5 items-center bg-white dark:bg-darkg rounded-lg mt-2'>
                         <img src={pinDetail.postedBy?.image} alt="user-profile" className='w-8 h-8 rounded-full object-cover' />
                         <p className='font-semibold capitalize dark:text-white'>{pinDetail.postedBy?.userName}</p>
                     </Link>
@@ -118,8 +122,8 @@ const PinDetail = ({ user }) => {
                     </div>
 
                     <div className='flex flex-wrap mt-6 gap-3'>
-                        <Link to={`user-profile/${pinDetail.postedBy?._id}`}>
-                            <img src={pinDetail.postedBy?.image} alt="user-profile" className='w-10 h-10 rounded-full cursor-pointer' />
+                        <Link to={`/user-profile/${user?._id}`}>
+                            <img src={user.image} alt="user-profile" className='w-10 h-10 rounded-full cursor-pointer' />
                         </Link>
                         <input
                             className='flex-1 border-gray-100 dark:text-white dark:border-neutral-600 dark:bg-darkgray outline-none border-2 p-2 rounded-2xl focus:border-gray-300'

@@ -54,7 +54,7 @@ const Sidebar = ({ user, closeToggle }) => {
                 </div>
             </div>
 
-            <div className='flex justify-center gap-4'>
+            <div className='flex justify-center gap-4 hidden md:flex'>
                 <MdWbSunny fontSize={28} className='dark:invert' />
                 <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
                 
