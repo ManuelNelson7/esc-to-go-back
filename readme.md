@@ -2,7 +2,7 @@
 
 ![](./Mockup-min.png)
 
-This is an social media project where you can share and save images and gifs from the past, getting your daily dosis of vintage.
+This is a social media project where you can share and save images and gifs from the past, getting your daily dosis of vintage.
 
 
 ## Links
