@@ -1,4 +1,5 @@
 <h1 align="center">📷 Esc to go back</h1>
+
 ![](./Mockup-min.png)
 
 This is a social media project where you can share and save images and gifs from the past, getting your daily dosis of vintage.
